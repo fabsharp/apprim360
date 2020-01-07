@@ -9,7 +9,7 @@
     "device:android": "cordova run android",
     "emulate:android": "cordova emulate android",
     "test:android": "wdio test/wdio.android.conf.js",
-    "test:browserstack": "npm run build:android && set \"BROWSERSTACK_USERNAME=fabienlevavasseu1\" && set \"BROWSERSTACK_ACCESS_KEY=CqEZGov3yqKBExmx61Mx\" && node test/browserstack.js"
+    "test:browserstack": "npm run build:android && set \"BROWSERSTACK_USERNAME=username\" && set \"BROWSERSTACK_ACCESS_KEY=password\" && node test/browserstack.js"
   },
   "keywords": [
     "ecosystem:cordova"

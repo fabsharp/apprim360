@@ -7,8 +7,8 @@ const formData = new FormData();
 
 // Open file stream
 const newFile = fs.createReadStream('platforms/android/app/build/outputs/apk/debug/app-debug.apk');
-const username =  process.env.BROWSERSTACK_USERNAME; //'fabienlevavasseu1';
-const password =   process.env.BROWSERSTACK_ACCESS_KEY; //'CqEZGov3yqKBExmx61Mx';
+const username =  process.env.BROWSERSTACK_USERNAME;
+const password =   process.env.BROWSERSTACK_ACCESS_KEY;
 const devices = [{
     'device' : 'Samsung Galaxy S7',
     'os_version' : '6.0',
