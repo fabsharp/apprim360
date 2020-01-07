@@ -16,10 +16,9 @@ I tried  ```'browserstack.appium_version': '1.7.1' ``` but same first error (not
 
 To reproduce the bug :
 1. Compile the app
-2. ```npm run test:browserstack```
+2. ```npm run test:browserstack``` will do the following (see [test/browserstack.js](https://github.com/fabsharp/apprim360/blob/master/test/browserstack.js) for details)
     * upload the apk to browserstack cloud
-    * launch test from **test/specs/basic.js**
-    * (see **test/browserstack.js** for details)
+    * launch [test/specs/basic.js](https://github.com/fabsharp/apprim360/blob/master/test/specs/basic.js)
     
 Note :  You need to configure your browserstack username and password in https://github.com/fabsharp/apprim360/blob/master/package.json#L12
 
@@ -43,7 +42,7 @@ Note :  You need to configure your browserstack username and password in https:/
 
 ### What test does
 
-In **www/index.html** there's this script : 
+In [www/index.html](https://github.com/fabsharp/apprim360/blob/master/www/index.html#L26) there's this script : 
 ```
 <script>
     window.APPRIM360 = {
