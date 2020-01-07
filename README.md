@@ -37,7 +37,9 @@ Note : you will need
 ## Test
 
 * device or emulator (emulator need to be started first) ```npm run test:android```
-* browserstack ```BROWSERSTACK_USERNAME='fabienlevavasseu1' BROWSERSTACK_ACCESS_KEY='CqEZGov3yqKBExmx61Mx' npm run test:browserstack```
+* browserstack :
+    * You need to configure your browserstack username and password in https://github.com/fabsharp/apprim360/blob/master/package.json#L12
+    * ```npm run test:browserstack```
 
 ### What test does
 
@@ -52,7 +54,7 @@ In **www/index.html** there's this script :
     };
 </script>
 ```
-We would like to get the APPRIM360 object in test/specs/basic.js 
+We would like to get the APPRIM360 object in [test/specs/basic.js](https://github.com/fabsharp/apprim360/blob/master/test/specs/basic.js#L26) 
 ```
 var apprim360 = browser.execute(function(done)  {
             return window.APPRIM360;
