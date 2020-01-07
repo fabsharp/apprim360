@@ -21,7 +21,7 @@ To reproduce the bug :
     * launch test from **test/specs/basic.js**
     * (see **test/browserstack.js** for details)
     
-Note : you will need 
+Note :  You need to configure your browserstack username and password in https://github.com/fabsharp/apprim360/blob/master/package.json#L12
 
 ## Compile the app
 
