@@ -22,7 +22,7 @@ script:
   - cp -r platforms/ios/build/emulator/APPRIM360.app/ Payload/APPRIM360.app/
   - ls Payload/
   - zip -r APPRIM360.zip Payload
-  - mv HelloCordova.zip APPRIM360.ipa
+  - mv APPRIM360.zip APPRIM360.ipa
 deploy:
   - provider: releases
     file:
