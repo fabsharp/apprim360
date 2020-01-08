@@ -1,10 +1,17 @@
 let merge = require('deepmerge');
 let wdioConf = require('./wdio.conf.js');
-console.log(wdioConf);
-let config = merge(wdioConf.config, {
+
+exports.config = merge(wdioConf.config, {
     // Use the Appium plugin for Webdriver. Without this, we would need to run appium
     // separately on the command line.
-    services: [ 'appium'],
+    services: [ 'appium' ],
+
+    appium : {
+        logPath : './logs/',
+        args : {
+            'allow-insecure' : 'chromedriver_autodownload'
+        }
+    },
 
     // 4723 is the default port for Appium
     port: 4723,
@@ -37,10 +44,6 @@ let config = merge(wdioConf.config, {
 
         // When set to true, it will not show permission dialogs, but instead grant all
         // permissions automatically.
-        autoGrantPermissions: true,
-        chromedriverExecutable: './chromedrivers/chromedriver-79.exe'
+        autoGrantPermissions: true
     }],
 });
-
-console.log(config);
-exports.config = config;

@@ -9,7 +9,7 @@
     "device:android": "cordova run android",
     "emulate:android": "cordova emulate android",
     "test:android": "wdio test/wdio.android.conf.js",
-    "test:browserstack": "npm run build:android && set \"BROWSERSTACK_USERNAME=username\" && set \"BROWSERSTACK_ACCESS_KEY=password\" && node test/browserstack.js"
+    "test:browserstack": "npm run build:android && node test/browserstack.js"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -34,6 +34,7 @@
     "chromedriver": "^79.0.0",
     "cordova-plugin-whitelist": "^1.3.4",
     "deepmerge": "^4.2.2",
+    "dotenv": "^8.2.0",
     "form-data": "^3.0.0",
     "fs": "0.0.1-security",
     "wdio-chromedriver-service": "^5.0.2",

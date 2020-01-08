@@ -4,18 +4,16 @@ const fs = require('fs');
 const FormData = require('form-data');
 let merge = require('deepmerge');
 const formData = new FormData();
+require('dotenv').config();
 
 // Open file stream
 const newFile = fs.createReadStream('platforms/android/app/build/outputs/apk/debug/app-debug.apk');
 const username =  process.env.BROWSERSTACK_USERNAME;
 const password =   process.env.BROWSERSTACK_ACCESS_KEY;
 const devices = [{
-    'device' : 'Samsung Galaxy S7',
-    'os_version' : '6.0',
-    'browserstack.appium_version': '1.9.1'
-}, {
     'device' : 'Samsung Galaxy S6',
-    'os_version' : '5.0'
+    'os_version' : '5.0',
+    'name': 'execute string',
 }];
 
 // Add form field params
@@ -41,8 +39,7 @@ axios({
         devices.forEach((device) => {
             capabilities.push(merge(device, {
                 'browserstack.debug' : true,
-                'build' : 'android build',
-                'name': 'apprim 360',
+                'build' :  process.env.BUILD,
                 'app' : app_url,
                 "autoWebview": true,
             }))
