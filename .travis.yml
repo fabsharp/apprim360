@@ -17,17 +17,17 @@ script:
   - zip -r build.zip platforms/ios/build/emulator/
   - mkdir Payload
   - cd Payload
-  - mkdir HelloCordova.app
+  - mkdir APPRIM360.app
   - cd ..
-  - cp -r platforms/ios/build/emulator/HelloCordova.app/ Payload/HelloCordova.app/
+  - cp -r platforms/ios/build/emulator/APPRIM360.app/ Payload/APPRIM360.app/
   - ls Payload/
-  - zip -r HelloCordova.zip Payload
-  - mv HelloCordova.zip HelloCordova.ipa
+  - zip -r APPRIM360.zip Payload
+  - mv HelloCordova.zip APPRIM360.ipa
 deploy:
   - provider: releases
     file:
       - build.zip
-      - HelloCordova.ipa
+      - APPRIM360.ipa
     name: release-ios
     api_key:
       secure: $GITHUB_TOKEN
